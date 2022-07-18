@@ -17,5 +17,7 @@ Route::get('/', 'PagesController@home')->name('home');
 Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/contacts', 'PagesController@contacts')->name('contacts');
 
-Route::get('/comics', 'ComicsController@index')->name('comics.index');
-Route::post('/comics', 'ComicsController@store')->name('comics.index');
+/* Route::get('/comics', 'ComicsController@index')->name('comics.index');
+Route::post('/comics', 'ComicsController@store')->name('comics.index'); */
+
+Route::resource('/comics','ComicsController');
